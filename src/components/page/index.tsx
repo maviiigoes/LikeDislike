@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Frases, FrasesProps } from './Frase/Frases'
+import {  FrasesProps } from './Frase/Frases'
+import { FrasesItem } from './FrasesItem';
 import { ulid } from 'ulidx'
 
 export function Topicos() {
@@ -66,7 +67,7 @@ export function Topicos() {
     <>
       <h1>Lista de frases</h1>
       {frases.map((frase: JSX.IntrinsicAttributes & FrasesProps) => (
-        <Frases key={frase.id} {...frase} />
+        <FrasesItem key={frase.id} {...frase} />
       ))}
     </>
   );
