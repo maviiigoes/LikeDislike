@@ -19,12 +19,12 @@ export interface FrasesProps {
 }
 
 export function Frases({
-  id,
+  //id,
   descricao,
   autor,
-  created_at,
+  //created_at,
   tags,
-  active,
+  //active,
   like: initialLike,
   dislike: initialDislike,
 }: FrasesProps) {
