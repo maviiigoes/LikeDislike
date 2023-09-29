@@ -69,9 +69,9 @@ export function Frases({
 
           </p>
           <br />
-          <>
+          <p className="LikeDislike">
           Like: {like} ||  Dislike: {dislike}
-          </>
+          </p>
         
         <div className="container-progresso">
           <div
