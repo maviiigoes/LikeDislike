@@ -41,10 +41,10 @@ export function Frases({
 
   const resultado = like - dislike;
 
-  // Ajuste a largura (width) da barra de progresso com base nos likes e dislikes
+ 
   const progressoStyle = {
     width: `${like / (like + dislike) * 100}%`,
-    backgroundColor: 'green', // Mantenha a cor de fundo verde
+    backgroundColor: 'green', 
   };
 
   const likeButtonClass = resultado >= 1 ? "green-button" : "";
@@ -76,7 +76,7 @@ export function Frases({
         <div className="container-progresso">
           <div
             className={`progresso`}
-            style={progressoStyle} // Use o estilo de largura (width) ajustada
+            style={progressoStyle} 
           ></div>
         </div>
         <div>
