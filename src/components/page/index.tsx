@@ -1,35 +1,60 @@
 import { useState } from 'react'
-import { Frases, frasesProps } from './Frase/Frases'
+import { Frases, FrasesProps } from './Frase/Frases'
 import { ulid } from 'ulidx'
 
 export function Topicos() {
-  const [frases, setFrases] = useState<frasesProps[]>([]);
+  const [frases, setFrases] = useState<FrasesProps[]>([]);
 
   const autorEx = {
-    nome: "maria",
+    nome: "Sócrates",
     cidade: "the",
     pais: "br"
   }; 
+
+
+  const autorEx1 = {
+    nome: "Maria",
+    cidade: "the",
+    pais: "br"
+  }; 
+
+  const autorEx2 = {
+    nome: "Vitória",
+    cidade: "the",
+    pais: "br"
+  }; 
+
+
   const exemplosDeFrases = [
     {
       id: ulid(),
-      descricao: 'sorria',
+      descricao: 'Só sei que nada sei',
       autor: autorEx,
       created_at: new Date(),
-      tags: ['viva'],
+      tags: ['filosofia'],
       active: false,
       like: 10,
       dislike: 2
     },
     {
       id: ulid(),
-      descricao: 'aprenda algo novo',
-      autor: autorEx,
+      descricao: 'Beba agua, coma bem e faça exercícios',
+      autor: autorEx1,
       created_at: new Date(),
       tags: ['educacional'],
       active: true,
       like: 5,
       dislike: 1
+    },
+    {
+      id: ulid(),
+      descricao: 'De nada adianta ter sonhos, se você não se empenhar em correr atrás',
+      autor: autorEx2,
+      created_at: new Date(),
+      tags: ['motivacional'],
+      active: true,
+      like: 5,
+      dislike: 0
     }
   ];
 
@@ -40,7 +65,7 @@ export function Topicos() {
   return (
     <>
       <h1>Lista de frases</h1>
-      {frases.map((frase: JSX.IntrinsicAttributes & frasesProps) => (
+      {frases.map((frase: JSX.IntrinsicAttributes & FrasesProps) => (
         <Frases key={frase.id} {...frase} />
       ))}
     </>
